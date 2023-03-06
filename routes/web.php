@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\HomepageController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,9 +17,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
-Route::get('/dashboard', 'FrontendController@index');
-Route::get("products", 'ProductController@index');
+Route::get('/', 'App\Http\Controllers\HomepageController@index');
+Route::get('products', 'App\Http\Controllers\ProductController@index');
+Route::get('add', 'App\Http\Controllers\ProductController@add');
+Route::post('store','App\Http\Controllers\ProductController@store');

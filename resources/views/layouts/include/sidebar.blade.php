@@ -15,7 +15,7 @@
           <p>Dashboard</p>
         </a>
       </li>
-      <li class="nav-item ">
+      <li class="nav-item {{Request::is('products') ? 'active':''}}">
         <a class="nav-link" href="{{ url('products')}}">
           <i class="material-icons">person</i>
           <p>Products</p>
