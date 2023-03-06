@@ -16,21 +16,21 @@
         </a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" href="./user.html">
+        <a class="nav-link" href="{{ url('products')}}">
           <i class="material-icons">person</i>
-          <p>User Profile</p>
+          <p>Products</p>
         </a>
       </li>
       <li class="nav-item ">
         <a class="nav-link" href="./tables.html">
           <i class="material-icons">content_paste</i>
-          <p>Table List</p>
+          <p>Add Product</p>
         </a>
       </li>
       <li class="nav-item ">
         <a class="nav-link" href="./typography.html">
           <i class="material-icons">library_books</i>
-          <p>Typography</p>
+          <p>Sample</p>
         </a>
       </li>
       <li class="nav-item ">

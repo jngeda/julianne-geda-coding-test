@@ -13,9 +13,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.productlist');
     }
-
+    
     /**
      * Store a newly created resource in storage.
      *
