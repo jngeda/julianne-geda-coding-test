@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
 
         <!-- Styles -->
+        <link href="{{ asset('dashboard/css/custom.css')}}" rel="stylesheet" />
         <link href="{{ asset('dashboard/css/material-dashboard.css?v=2.1.2')}}" rel="stylesheet" />
        
     </head>
