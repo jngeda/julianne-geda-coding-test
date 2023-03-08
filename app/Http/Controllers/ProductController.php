@@ -93,4 +93,10 @@ class ProductController extends Controller
     {
         return Product::find($id);
     }
+
+    public function search(Request $request)
+    {
+        $search_item = Product::where('name', 'like', '%' .$request->input('query').'%')->get();
+        return view('admin.search', ['products' =>$search_item]);
+    }
 }
