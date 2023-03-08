@@ -5,8 +5,7 @@
         <div class="card-header">
                 <div>
                     <a href="{{ url('add-products')}}" class="btn btn-primary pull-right">Add Product</a>
-                    <h1><i class="fa fa-tags"></i> Product List</h1>
-                    <p>Mug Repository</p>  
+                    <h1 align="center"><i class="fa fa-tags"></i> Product List</h1> 
                 </div>
             <hr>
         </div>
@@ -18,10 +17,10 @@
                             <table class="table table-hover table-bordered" id="sampleTable">
                                 <thead>
                                 <tr>
-                                    <th> # </th>
-                                    <th> Name </th>
-                                    <th class="text-center"> Price </th>
-                                    <th class="text-center"> Image </th>
+                                    <th class="text-center" style="font-weight:bold"> # </th>
+                                    <th class="text-center" style="font-weight:bold"> Name </th>
+                                    <th class="text-center" style="font-weight:bold"> Price </th>
+                                    <th class="text-center" style="font-weight:bold"> Image </th>
                                     <th style="width:100px; min-width:100px;" class="text-center text-danger"><i class="fa fa-bolt"> </i></th>
                                 </tr>
                                 </thead>
@@ -37,7 +36,8 @@
 
                                             <td class="text-center">
                                                 <div class="btn-group" role="group" aria-label="Second group">
-                                                    <a href="{{ url('edit-product/'.$item->id) }}" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></a>
+                                                    <a href="{{ url('detail-product/'.$item->id) }}" class="btn btn-sm btn-primary"><i class="fa fa-eye"></i></a>
+                                                    <a href="{{ url('edit-product/'.$item->id) }}" class="btn btn-sm btn-sucess"><i class="fa fa-edit"></i></a>
                                                     <a href="{{ url('add', $item->id) }}" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
                                                 </div>
                                             </td>
@@ -50,6 +50,9 @@
                 </div>
             </div>
 
+        </div>
+        <div class="card-footer">
+            <hr>
         </div>
     </div>
     

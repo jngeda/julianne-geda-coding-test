@@ -21,7 +21,7 @@
           <p>Products</p>
         </a>
       </li>
-      <li class="nav-item {{Request::is('add-products') ? 'active':''}}">
+      <li class="nav-item {{Request::is('detail-product') ? 'active':''}}">
         <a class="nav-link" href="{{ url('add-products')}}">
           <i class="material-icons">bubble_chart</i>
           <p>Product Detail</p>

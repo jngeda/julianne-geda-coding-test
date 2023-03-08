@@ -30,6 +30,6 @@ Route::post('insert-product',[ProductController::class, 'store']);
 Route::get('edit-product/{id}', [ProductController::class, 'edit']);
 Route::put('update-product/{id}', [ProductController::class, 'update']);
 
-Route::get('detail', 'App\Http\Controllers\ProductController@detail');
+Route::get('detail-product/{id}', [ProductController::class, 'detail']);
 
 Route::get('search', [ProductController::class, 'search']);

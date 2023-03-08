@@ -89,9 +89,11 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function detail($id)
     {
-        return Product::find($id);
+        $products = Product::find($id);
+        return view('admin.detail', compact('products'));
     }
 
     public function search(Request $request)

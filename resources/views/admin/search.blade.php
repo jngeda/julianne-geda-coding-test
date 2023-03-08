@@ -18,10 +18,10 @@
                             <table class="table table-hover table-bordered" id="sampleTable">
                                 <thead>
                                 <tr>
-                                    <th> # </th>
-                                    <th> Name </th>
-                                    <th class="text-center"> Price </th>
-                                    <th class="text-center"> Image </th>
+                                    <th class="text-center" style="font-weight:bold"> # </th>
+                                    <th class="text-center" style="font-weight:bold"> Name </th>
+                                    <th class="text-center" style="font-weight:bold"> Price </th>
+                                    <th class="text-center" style="font-weight:bold"> Image </th>
                                     <th style="width:100px; min-width:100px;" class="text-center text-danger"><i class="fa fa-bolt"> </i></th>
                                 </tr>
                                 </thead>
