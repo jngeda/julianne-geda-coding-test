@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Product;
+use Illuminate\Support\Facades\File;
 use Faker\Provider\ar_EG\Company;
 
 class ProductController extends Controller
@@ -17,7 +18,7 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::all();
-        return view('admin.productlist', compact('products'));
+        return view('admin.product', compact('products'));
     }
     
     public function add()
@@ -48,7 +49,7 @@ class ProductController extends Controller
         $products->price = $request->input('price');
         $products->description = $request->input('description');
         $products->save();
-        return redirect('products')->with('success',"Product Added Succesfully");
+        return redirect('products')->with('message',"Product Added Succesfully");
     }
 
     public function edit($id)
@@ -56,6 +57,31 @@ class ProductController extends Controller
         $products = Product::find($id);
         return view('admin.edit', compact('products'));
     }
+
+    public function update(Request $request, $id)
+    {
+        $products = Product::find($id);
+        if($request->hasFile('image'))
+        {
+            $fileDestination = 'assets/products/'.$products->image;
+            if(File::exists($fileDestination))
+            {
+                File::delete($fileDestination);
+            }
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time(). ".".$extension;
+            $file->move(public_path($fileDestination), $filename);
+            $products->image = $filename;
+        }
+
+        $products->name = $request->input('name');
+        $products->price = $request->input('price');
+        $products->description = $request->input('description');
+        $products->update();
+        return redirect('products')->with('message',"Product Updated Succesfully");
+    }
+
 
     /**
      * Display the specified resource.

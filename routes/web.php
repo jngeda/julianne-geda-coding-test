@@ -22,8 +22,12 @@ use Illuminate\Support\Facades\Route;
 //});
 
 Route::get('/', 'App\Http\Controllers\HomepageController@index');
-Route::get('products', 'App\Http\Controllers\ProductController@index');
-Route::get('add', 'App\Http\Controllers\ProductController@add');
-Route::get('detail', 'App\Http\Controllers\ProductController@detail');
-Route::post('store','App\Http\Controllers\ProductController@store');
+
+Route::get('products', [ProductController::class, 'index']);
+Route::get('add-products', [ProductController::class, 'add']);
+Route::post('insert-product',[ProductController::class, 'store']);
+
 Route::get('edit-product/{id}', [ProductController::class, 'edit']);
+Route::put('update-product/{id}', [ProductController::class, 'update']);
+
+Route::get('detail', 'App\Http\Controllers\ProductController@detail');

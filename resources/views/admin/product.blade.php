@@ -4,7 +4,7 @@
     <div class="card">
         <div class="card-header">
                 <div>
-                    <a href="{{ url('add') }}" class="btn btn-primary pull-right">Add Product</a>
+                    <a href="{{ url('add-products')}}" class="btn btn-primary pull-right">Add Product</a>
                     <h1><i class="fa fa-tags"></i> Product List</h1>
                     <p>Mug Repository</p>  
                 </div>
