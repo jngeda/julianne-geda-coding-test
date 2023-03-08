@@ -5,8 +5,7 @@
         <div class="card-header">
                 <div>
                     <a href="{{ url('add-products')}}" class="btn btn-primary pull-right">Add Product</a>
-                    <h1><i class="fa fa-tags"></i> Product List</h1>
-                    <p>Mug Repository</p>  
+                    <h1 align="center"><i class="fa fa-tags"></i> Product List</h1> 
                 </div>
             <hr>
         </div>
@@ -37,7 +36,8 @@
 
                                             <td class="text-center">
                                                 <div class="btn-group" role="group" aria-label="Second group">
-                                                    <a href="{{ url('edit-product/'.$item->id) }}" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></a>
+                                                    <a href="{{ url('detail-product/'.$item->id) }}" class="btn btn-sm btn-primary"><i class="fa fa-eye"></i></a>
+                                                    <a href="{{ url('edit-product/'.$item->id) }}" class="btn btn-sm btn-info"><i class="fa fa-edit"></i></a>
                                                     <a href="{{ url('add', $item->id) }}" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
                                                 </div>
                                             </td>
@@ -45,6 +45,9 @@
                                     @endforeach
                                 </tbody>
                             </table>
+                            <ul class="pagination justify-content-end color-red">
+                                {{$products->links('pagination::bootstrap-4')}}
+                            </ul>
                         </div>
                     </div>
                 </div>

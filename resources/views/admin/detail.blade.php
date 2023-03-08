@@ -37,7 +37,7 @@
                                     <div class="col-lg-12 mt-3">
                                         <div class="row" role="group">
                                             <div class="col-lg-6 pb-2">
-                                                <a href="#" class="btn btn-success w-100">Edit Product</a>
+                                                <a href="{{ url('edit-product/'.$products->id) }}" class="btn btn-success w-100">Edit Product</a>
                                             </div>
                                             <div class="col-lg-6">
                                                 <a href="#" class="btn btn-danger w-100">Delete Product</a>

@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
   <div class="container-fluid">
     <div class="navbar-wrapper">
-      <a class="navbar-brand" href="javascript:;">Dashboard</a>
+      <a class="navbar-brand" href="javascript:;">Mug for Shot</a>
     </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
       <span class="sr-only">Toggle navigation</span>
@@ -13,7 +13,7 @@
 
       <form class="navbar-form" type="get" action="/search" >
         <div class="input-group no-border">
-          <input class="form-control" type="search" name="query" placeholder="Search...">
+          <input class="form-control" type="search" name="query" placeholder="Search product..." style="width:200px">
           <button type="submit" class="btn btn-white btn-round btn-just-icon">
             <i class="material-icons">search</i>
             <div class="ripple-container"></div>
