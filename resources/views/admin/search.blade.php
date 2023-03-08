@@ -45,9 +45,6 @@
                                     @endforeach
                                 </tbody>
                             </table>
-                            <ul class="pagination justify-content-end color-red">
-                                {{$products->links('pagination::bootstrap-4')}}
-                            </ul>
                         </div>
                     </div>
                 </div>

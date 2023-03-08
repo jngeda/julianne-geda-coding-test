@@ -29,6 +29,7 @@ Route::post('insert-product',[ProductController::class, 'store']);
 
 Route::get('edit-product/{id}', [ProductController::class, 'edit']);
 Route::put('update-product/{id}', [ProductController::class, 'update']);
+Route::delete('delete-product/{id}', [ProductController::class, 'delete']);
 
 Route::get('detail-product/{id}', [ProductController::class, 'detail']);
 

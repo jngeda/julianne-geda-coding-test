@@ -17,7 +17,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::paginate(5);
+        $products = Product::all();
         return view('admin.product', compact('products'));
     }
     
@@ -82,6 +82,12 @@ class ProductController extends Controller
         return redirect('products')->with('message',"Product Updated Succesfully");
     }
 
+    public  function delete($id)
+    {
+        $products = Product::find($id);
+        $products->delete();
+        return redirect()->back();
+    }
 
     /**
      * Display the specified resource.
