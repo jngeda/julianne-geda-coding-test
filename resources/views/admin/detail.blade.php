@@ -6,7 +6,7 @@
             <h1>Product Detail</h1>
         </div>
         <hr>
-
+        
         <div class="card-body">
             <div class="container">
                 <div class="col-lg-12 p-2 main-section bg-white">
@@ -30,8 +30,8 @@
                                         <hr class="m-0 pt-2 mt-2">
                                     </div>
                                     <div class="col-lg-12">
-                                        <p class="tag-section">Created at: </p>
-                                        <p class="tag-section">Modified at: </p>
+                                        <p class="tag-section">Created: </p>
+                                        <p class="tag-section">Modified: </p>
                                     </div>
                                     
                                     <div class="col-lg-12 mt-3">
@@ -40,7 +40,11 @@
                                                 <a href="{{ url('edit-product/'.$products->id) }}" class="btn btn-success w-100">Edit Product</a>
                                             </div>
                                             <div class="col-lg-6">
-                                                <a href="#" class="btn btn-danger w-100">Delete Product</a>
+                                                <form action="{{ url('delete-product', $products->id) }}" method="POST">
+                                                    {{ method_field('DELETE')}}
+                                                    {{ csrf_field()}}
+                                                    <button class="btn btn-danger w-100" type="submit">Delete Product</button>
+                                                </form>  
                                             </div>
                                         </div>
                                     </div>

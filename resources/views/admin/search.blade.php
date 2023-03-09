@@ -35,10 +35,14 @@
                                             </td>
 
                                             <td class="text-center">
-                                                <div class="btn-group" role="group" aria-label="Second group">
+                                                <div class="" role="group" aria-label="Second group">
                                                     <a href="{{ url('detail-product/'.$item->id) }}" class="btn btn-sm btn-primary"><i class="fa fa-eye"></i></a>
-                                                    <a href="{{ url('edit-product/'.$item->id) }}" class="btn btn-sm btn-info"><i class="fa fa-edit"></i></a>
-                                                    <a href="{{ url('add', $item->id) }}" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
+                                                    <a href="{{ url('edit-product/'.$item->id) }}" class="btn btn-sm btn-success"><i class="fa fa-edit"></i></a>
+                                                    <form action="{{ url('delete-product', $item->id) }}" method="POST">
+                                                        {{ method_field('DELETE')}}
+                                                        {{ csrf_field()}}
+                                                        <button class="btn btn-sm btn-danger" type="submit"><i class="fa fa-trash"></i></button>
+                                                    </form>  
                                                 </div>
                                             </td>
                                         </tr>

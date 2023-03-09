@@ -4,8 +4,8 @@
 
     Tip 2: you can also add an image using data-image tag
 -->
-  <div class="logo"><a href="http://www.creative-tim.com" class="simple-text logo-normal">
-      Creative Tim
+  <div class="logo"><a href="#" class="simple-text logo-normal" style="font-size: 25px; color: purple">
+    COFFEE CUP
     </a></div>
   <div class="sidebar-wrapper">
     <ul class="nav">
@@ -21,16 +21,17 @@
           <p>Products</p>
         </a>
       </li>
-      <li class="nav-item {{Request::is('detail-product') ? 'active':''}}">
+      <li class="nav-item {{Request::is('add-products') ? 'active':''}}">
         <a class="nav-link" href="{{ url('add-products')}}">
           <i class="material-icons">bubble_chart</i>
-          <p>Product Detail</p>
+          <p>Add Product</p>
         </a>
       </li>
+
       <li class="nav-item {{Request::is('add-products') ? 'active':''}}">
         <a class="nav-link" href="{{ url('add-products')}}">
           <i class="material-icons">library_books</i>
-          <p>Add Product</p>
+          <p>Product Log</p>
         </a>
       </li>
 

@@ -26,6 +26,8 @@ class ProductController extends Controller
         return view('admin.add');
     }
 
+
+
     /**
      * Store a newly created resource in storage.
      *
