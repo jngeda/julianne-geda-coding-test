@@ -28,14 +28,17 @@
         </a>
       </li>
 
+
+       <!-- 
+
+      
       <li class="nav-item {{Request::is('add-products') ? 'active':''}}">
         <a class="nav-link" href="{{ url('add-products')}}">
           <i class="material-icons">library_books</i>
           <p>Product Log</p>
         </a>
       </li>
-
-       <!-- 
+        
       <li class="nav-item ">
         <a class="nav-link" href="./typography.html">
           <i class="material-icons">library_books</i>

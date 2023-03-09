@@ -50,6 +50,9 @@
 
 
         </div>
+        <div class="card-footer">
+            <hr>
+        </div>
     </div>
     
 @endsection

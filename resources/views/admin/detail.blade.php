@@ -30,8 +30,8 @@
                                         <hr class="m-0 pt-2 mt-2">
                                     </div>
                                     <div class="col-lg-12">
-                                        <p class="tag-section">Created: </p>
-                                        <p class="tag-section">Modified: </p>
+                                        <p class="tag-section">Created: {{$products->created_at}} </p>
+                                        <p class="tag-section">Modified: {{$products->updated_at}} </p>
                                     </div>
                                     
                                     <div class="col-lg-12 mt-3">

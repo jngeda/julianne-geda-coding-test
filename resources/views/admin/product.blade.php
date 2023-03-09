@@ -1,6 +1,14 @@
 @extends('layouts.dashboard')
 
 @section('content')
+
+    @if(session()->has('message'))
+        <div class="alert alert-success alert-block">
+            <button type="button" class="close" data-dismiss="alert">×</button>	
+            <strong>{{ session()->get('message') }}</strong>
+        </div>
+    @endif
+
     <div class="card">
         <div class="card-header">
                 <div>
@@ -50,7 +58,16 @@
                                 </tbody>
                             </table>
                         </div>
+                        
+                        <nav> 
+                            <ul class="pagination justify-content-end" > 
+                                {{$products->links()}}
+                            </ul>
+                        </nav>
+                        
                     </div>
+
+
                 </div>
             </div>
 

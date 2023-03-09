@@ -173,4 +173,12 @@ body{
       border-radius: 6px;
   }
   }
+
+  /* Paginator CSS */
+
   
+
+  .pagination .page-link {
+    background: rgb(134, 38, 163);
+    color: white;
+}

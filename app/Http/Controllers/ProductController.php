@@ -17,15 +17,14 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::all();
-        return view('admin.product', compact('products'));
+        $products = Product::paginate(5);
+        return view('admin.product', compact('products'))->with('i', (request()->input('page', 1) - 1 )*5);
     }
     
     public function add()
     {
         return view('admin.add');
     }
-
 
 
     /**
@@ -65,7 +64,7 @@ class ProductController extends Controller
         $products = Product::find($id);
         if($request->hasFile('image'))
         {
-            $fileDestination = 'assets/products/'.$products->image;
+            $fileDestination = 'assets/products/';
             if(File::exists($fileDestination))
             {
                 File::delete($fileDestination);
